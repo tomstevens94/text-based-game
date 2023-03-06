@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const { player, owner } = require('../characters');
-const { isValidName } = require('../validation/string');
+const { isValidString } = require('../validation/validateString');
 const { capitalise } = require('../utility');
 
 const enterName = async () => {
@@ -9,7 +9,7 @@ const enterName = async () => {
       type: 'input',
       name: 'name',
       message: 'What is your name?',
-      validate: isValidName
+      validate: isValidString
     }
   );
 

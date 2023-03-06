@@ -1,6 +1,7 @@
 const { player } = require('./characters');
 var colors = require('colors');
 
+
 const capitalise = (str) => str.split(' ').map(e => e.slice(0, 1).toUpperCase() + e.slice(1).toLowerCase()).join(' ');
 
 function updateAnxiety(num) {
