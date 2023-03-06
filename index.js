@@ -6,13 +6,19 @@ const {
   womanResponse,
   chooseASong
 } = require('./functions/inq');
+
 const {
   logBreak,
   updateAnxiety,
   updateKnowledge,
   updateHappiness
 } = require('./utility');
-const { player, owner } = require('./characters');
+
+const {
+  player,
+  owner
+} = require('./characters');
+
 var colors = require('colors');
 
 const start = async () => {
