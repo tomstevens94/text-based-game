@@ -55,5 +55,5 @@ describe('Test string validation function', () => {
     const isValid = isValidString(validString);
 
     expect(isValid).toBe(true);
-  })
+  });
 });
