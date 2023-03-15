@@ -1,12 +1,20 @@
+const {
+    enterName
+} = require('../functions/inq');
+
+const {
+    player
+} = require('../characters');
 
 const inquirer = require('inquirer');
-
 jest.mock('inquirer');
-describe('enter name', () => {
-  test('user input', async () => {
-    expect.assertions(1);
-    inquirer.prompt = jest.fn().mockResolvedValue({ name: 'john doe' });
-    const { player, owner } = require('../characters');
-    await expect(player.name).toEqual('john doe');
-  });
-});
+
+describe('enterName function', () => {
+    test('Should capitalise and update player name', async () => {
+        inquirer.prompt.mockResolvedValue({name: 'toMmY tUCKER'});
+
+        await enterName();
+
+        expect(player.name).toBe('Tommy Tucker');
+    });
+})

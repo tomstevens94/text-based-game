@@ -14,7 +14,8 @@ const enterName = async () => {
   );
 
   player.name = capitalise(name);
-}
+} 
+
 const chooseWhoToSpeakTo = async () => {
   const choices = [
     'Speak to the old woman',
