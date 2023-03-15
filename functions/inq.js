@@ -51,7 +51,7 @@ const chooseClothes = async () => {
   const choices = [
     'Tuxedo',
     'Swimming Trunks',
-    'Gimp Suit'
+    'Clown Suit'
   ];
 
   const { outfit } = await inquirer.prompt({
@@ -66,7 +66,7 @@ const chooseClothes = async () => {
 
 const womanResponse = async () => {
   const choices = [
-    'I dont understand what\'s happening?',
+    'I don\'t understand what\'s happening?',
     'Not yet'
   ];
 
@@ -82,7 +82,7 @@ const womanResponse = async () => {
 
 const chooseASong = async () => {
   const choices = [
-    'Beethoven: Moonlight Sonata?',
+    'Beethoven: Moonlight Sonata',
     'Elton John: Rocketman',
     'Don\'t play anything, just cry'
   ];

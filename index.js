@@ -86,7 +86,7 @@ const getDressed = async () => {
       updateHappiness(-1);
       break;
     }
-    case 'Gimp Suit': {
+    case 'Clown Suit': {
       console.log(`${owner.name}: ${player.name} you look rediculous! It doesn't matter, theres no time to change!`);
       updateAnxiety(3);
       updateHappiness(-3);

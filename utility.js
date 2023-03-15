@@ -72,5 +72,6 @@ module.exports = {
   logBreak,
   updateAnxiety,
   updateKnowledge,
-  updateHappiness
+  updateHappiness,
+  limitNumber
 };
