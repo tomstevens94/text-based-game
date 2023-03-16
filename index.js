@@ -21,6 +21,7 @@ var colors = require("colors");
 
 const start = async () => {
   const name = await enterName();
+
   player.name = capitalise(name);
   console.log(
     `How much did you drink last night ${player.name}?\nYou've woken up with no knowledge of last night. You appear to be backstage at a concert hall. Try to get through the day mentally sane.`
@@ -94,9 +95,8 @@ const getDressed = async () => {
       break;
     }
     case "Swimming Trunks": {
-      console.log(
-        `${owner.name}: ${player.name} what are you wearing? It doesn't matter, there's no time!`
-      );
+      console.log(`${owner.name}: ${player.name} what are you wearing? It doesn't matter, there's no time!`);
+
       updateAnxiety(1);
       updateHappiness(-1);
       break;
@@ -157,7 +157,8 @@ const goOnStage = async () => {
       );
       console.log(`Elon Musk walks on stage, kisses your forehead`.blue);
       console.log(`Elon: They love you, here's a Tesla`);
-      updateHappiness(10);
+      updateHappiness(8);
+      break;
     }
     case 1: {
       // Elton John
@@ -169,14 +170,14 @@ const goOnStage = async () => {
           .blue
       );
       updateAnxiety(3);
-      updateHappiness(-10);
+      updateHappiness(-5);
+      break;
     }
     case 2: {
       // Cry
-      console.log(
-        "The crowd remains silent, as you slowly crawl off the stage"
-      );
-      updateAnxiety(10);
+      console.log("The crowd remains silent, as you slowly crawl off the stage");
+
+      updateAnxiety(9);
     }
     default:
       break;
@@ -184,6 +185,10 @@ const goOnStage = async () => {
 };
 
 start();
+
 module.exports = {
   speakToSomeone,
+  getDressed,
+  preStageQuestion,
+  goOnStage,
 };

@@ -1,7 +1,6 @@
 const inquirer = require("inquirer");
 const { player, owner } = require("../characters");
 const { isValidString } = require("../validation/validateString");
-const { capitalise } = require("../utility");
 
 const enterName = async () => {
   const { name } = await inquirer.prompt({

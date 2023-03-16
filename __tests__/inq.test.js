@@ -14,7 +14,9 @@ jest.mock("inquirer");
 
 describe("enterName function", () => {
   test("Should capitalise and update player name", async () => {
-    inquirer.prompt = jest.fn().mockResolvedValue({ name: "toMmY tUCKER" });
+    inquirer.prompt = jest
+      .fn()
+      .mockResolvedValue({ name: "toMmY tUCKER" });
 
     await expect(enterName()).resolves.toBe("toMmY tUCKER");
   });
@@ -39,10 +41,13 @@ describe("chooseWhoToSpeakTo function", () => {
 
 describe("speakToFriend function", () => {
   test("Where am I?", async () => {
-    inquirer.prompt = jest.fn().mockResolvedValue({ choice: "Where am I?" });
+    inquirer.prompt = jest
+      .fn()
+      .mockResolvedValue({ choice: "Where am I?" });
 
     await expect(speakToFriend()).resolves.toEqual(0);
   });
+
   test("What happened?", async () => {
     inquirer.prompt = jest.fn().mockResolvedValue({ choice: "What happened?" });
 
@@ -52,10 +57,13 @@ describe("speakToFriend function", () => {
 
 describe("chooseClothes function", () => {
   test("Tuxedo", async () => {
-    inquirer.prompt = jest.fn().mockResolvedValue({ outfit: "Tuxedo" });
+    inquirer.prompt = jest
+      .fn()
+      .mockResolvedValue({ outfit: "Tuxedo" });
 
     await expect(chooseClothes()).resolves.toEqual("Tuxedo");
   });
+
   test("Swimming Trunks", async () => {
     inquirer.prompt = jest
       .fn()
@@ -63,8 +71,11 @@ describe("chooseClothes function", () => {
 
     await expect(chooseClothes()).resolves.toEqual("Swimming Trunks");
   });
+
   test("Clown Suit", async () => {
-    inquirer.prompt = jest.fn().mockResolvedValue({ outfit: "Clown Suit" });
+    inquirer.prompt = jest
+      .fn()
+      .mockResolvedValue({ outfit: "Clown Suit" });
 
     await expect(chooseClothes()).resolves.toEqual("Clown Suit");
   });
@@ -80,8 +91,11 @@ describe("womanResponse function", () => {
       "I don't understand what's happening"
     );
   });
+
   test("Not yet", async () => {
-    inquirer.prompt = jest.fn().mockResolvedValue({ response: "Not yet" });
+    inquirer.prompt = jest
+      .fn()
+      .mockResolvedValue({ response: "Not yet" });
 
     await expect(womanResponse()).resolves.toEqual("Not yet");
   });
@@ -95,6 +109,7 @@ describe("chooseASong function", () => {
 
     await expect(chooseASong()).resolves.toEqual(0);
   });
+
   test("Elton John: Rocketman", async () => {
     inquirer.prompt = jest
       .fn()
@@ -102,6 +117,7 @@ describe("chooseASong function", () => {
 
     await expect(chooseASong()).resolves.toEqual(1);
   });
+
   test("Don't play anything, just cry", async () => {
     inquirer.prompt = jest
       .fn()
