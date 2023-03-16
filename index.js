@@ -95,7 +95,9 @@ const getDressed = async () => {
       break;
     }
     case "Swimming Trunks": {
-      console.log(`${owner.name}: ${player.name} what are you wearing? It doesn't matter, there's no time!`);
+      console.log(
+        `${owner.name}: ${player.name} what are you wearing? It doesn't matter, there's no time!`
+      );
 
       updateAnxiety(1);
       updateHappiness(-1);
@@ -103,7 +105,7 @@ const getDressed = async () => {
     }
     case "Clown Suit": {
       console.log(
-        `${owner.name}: ${player.name} you look rediculous! It doesn't matter, theres no time to change!`
+        `${owner.name}: ${player.name} you look ridiculous! It doesn't matter, there\'s no time to change!`
       );
       updateAnxiety(3);
       updateHappiness(-3);
@@ -175,7 +177,9 @@ const goOnStage = async () => {
     }
     case 2: {
       // Cry
-      console.log("The crowd remains silent, as you slowly crawl off the stage");
+      console.log(
+        "The crowd remains silent, as you slowly crawl off the stage"
+      );
 
       updateAnxiety(9);
     }
